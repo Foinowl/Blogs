@@ -1,0 +1,66 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<section id="blog">
+    <div class="container">
+        <div class="row">
+            <div id="slider" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#slider" data-slide-to="1"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                             {% for tag in tags %}
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="card text-center">
+                                    <img class="card-img-top"
+                                         src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb"
+                                         alt="" width="100%">
+                                    <div class="card-block">
+                                        <h4><a class="article-title" href="{% url 'tag-detail' tag.id %}">{{ tag.title }}</a></h4>
+
+                                        <a class="btn btn-default" href="{% url 'tag-detail' tag.id %}">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div> <!-- row -->
+                    </div> <!-- item -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        {% if is_paginated %}
+
+        {% if page_obj.has_previous %}
+            <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">
+                <span aria-hidden="true">«</span>
+            </a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+                <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">
+                 <span aria-hidden="true">»</span>
+            </a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+
+    {% endif %}
+{% endblock content %}
+
+
+
+
+

@@ -1,0 +1,150 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+  background-color: #050505;
+}
+
+/*.site-header .navbar-nav .nav-link {*/
+/*  color: #020303;*/
+/*}*/
+
+/*.site-header .navbar-nav .nav-link:hover {*/
+/*  color: #ffffff;*/
+/*}*/
+
+/*.site-header .navbar-nav .nav-link.active {*/
+/*  font-weight: 500;*/
+/*}*/
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #4296de;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900,700,600,500,300,200,100,800);
+
+section{
+    padding:60px 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    color: #4C4C4C;
+    word-spacing: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom:30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-size:13px;
+}
+
+.ion-minus{
+    padding:0px 10px;
+}
+
+#blog{
+	background-color:#f6f6f6;
+}
+
+#blog .carousel-indicators {
+    bottom: -60px;
+}
+
+#blog .carousel-indicators li{
+    background-color: #5db4c0;
+    height: 13px;
+    width: 13px;
+    margin: 5px;
+}
+
+#blog .carousel-indicators li.active{
+    background-color: #888383;
+}
+
+#blog .card-block{
+    padding: 10px;
+}
+
+#blog .card{
+    background-color: #FFF;
+    border: 1px solid #eceaea;
+    margin: 20px 0px;
+}
+
+.btn.btn-default {
+    background-color: #5db4c0;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    padding: 13px 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
